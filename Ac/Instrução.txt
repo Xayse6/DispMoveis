@@ -1,0 +1,17 @@
+Acii Art: é uma forma de arte digital feita usando caracteres de texto (ASCII) 
+para criar imagens ou desenhos. Esses caracteres podem ser letras, 
+números e símbolos do teclado, como (@ # * + - .).
+
+#Decrição do programa
+O programa pega uma imagem ou vídeo e transforma em ASCII Art.
+    -Se for uma imagem, o programa apenas converte a imagem para ASCII Art.
+    -Se for um vídeo, o programa separa os frames, transforma cada frame em ASCII Art e depois junta todos novamente, 
+    formando um vídeo em ASCII.
+
+
+Dentro do arquivo Acii.py, substitua o caminho do arquivo: file_path = "origem/video.mp4" 
+    (coloque o local onde esta sua imagem= (.png, .jpg, .jpeg, .bmp 
+        ou video= (.mp4, .avi, .mov, .mkv)))
+
+Os vídeos ou imagens convertidos serão salvos na pasta:
+OUTPUT_DIR = "saida_ascii"
