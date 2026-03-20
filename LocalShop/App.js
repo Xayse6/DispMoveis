@@ -15,7 +15,9 @@ export default function App() {
           component={HomeScreen}
           options={{ title: "LocalShop" }}
         />
+  
         <Stack.Screen
+        
           name="Detalhes"
           component={LojaDetalhes}
           options={({ route }) => ({ title: route.params.loja.nome })}
