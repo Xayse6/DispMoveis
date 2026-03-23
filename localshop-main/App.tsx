@@ -1,14 +1,9 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
 import HomeScreen from './src/screens/Home/HomeScreen';
 import LojaDetalhes from './src/screens/Details/LojaDetalhes';
-import { Loja } from "./src/@types/loja"
+import { Loja,RootStackParamList } from "./src/@types/loja"
 
-export type RootStackParamList={
-  Home: undefined; //Nao rebe paramentros
-  Detalhes: {loja:Loja}; //Precisa receber um objeto LOJA
-}
 const Stack = createStackNavigator();
 
 export default function App() {
