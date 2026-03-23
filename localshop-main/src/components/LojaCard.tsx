@@ -17,7 +17,7 @@ export default function LojaCard({ loja }: Props) {
       style={styles.card}
       onPress={() => navigation.navigate('Detalhes', { loja })}
     >
-      <Image source={{ uri: loja.image }} style={styles.image} />
+      <Image source={{ uri: loja.imagem }} style={styles.image} />
       <View style={styles.info}>
         <Text style={styles.nome}>{loja.nome}</Text>
         <Text style={styles.categoria}>{loja.categoria}</Text>
