@@ -1,13 +1,92 @@
+#arquivos james
+encurtador.com.br/mo1M
+
 React Native
 Node.js
-Expov
+Expo
 ---------------------------------------
-#criar app com nome LocalShop
+
+# 1 - Criar o projeto Expo
+
+# Criar projeto padrão
+npx create-expo-app@latest Delivery
+
+# Criar projeto com template vazio (blank)
 npx create-expo-app@latest LocalShop --template blank
-dsa
-#executar
+---------------------------------------
+
+# 2 - Entrar na pasta do projeto
+cd Delivery
+---------------------------------------
+
+# 3 - Abrir o projeto no VS Code
+code .
+---------------------------------------
+
+# 4 - Executar o projeto
 npx expo start
 ---------------------------------------
+
+# Configurar Git (nome e email)
+
+# Definir nome do usuário
+git config --global user.name Xayse6
+	
+# Definir email do usuário
+git config --global user.email xays3mpena@gmail.com
+
+# Remover usuário e email configurados globalmente no Git
+git config --global --unset user.name
+git config --global --unset user.email
+
+# (Opcional) Verificar se ainda existe alguma configuração
+git config --global --list
+---------------------------------------
+
+# Instalação do núcleo da navegação
+npm install @react-navigation/native
+
+# Instalação das dependências necessárias para navegação no Expo
+npx expo install react-native-screens react-native-safe-area-context
+
+# Instalação da navegação em pilha (Stack)
+npm install @react-navigation/stack
+
+# Após a instalação, corrigir possíveis vulnerabilidades
+npm audit fix
+---------------------------------------
+
+# Baixar arquivos do projeto base (opcional)
+encurtador.com.br/molM
+---------------------------------------
+
+# Instalar todas as dependências do projeto
+npm install
+
+# Caso ocorra erro, instalar dependência adicional
+npx expo install react-native-gesture-handler
+
+# Instalar TypeScript e tipagens compatíveis com Expo
+npx expo install typescript @types/react @types/react-native
+
+# Verificar vulnerabilidades do projeto
+npm audit
+
+# Corrigir vulnerabilidades novamente
+npm audit fix
+
+# Criar arquivo de configuração do TypeScript
+touch tsconfig.json
+
+# Verificar pacotes que podem receber apoio financeiro
+npm fund
+---------------------------------------
+
+# Após tudo instalado, iniciar o projeto
+npx expo start
+
+
+#seila tenho que ver
 #Instalação do nucleo da navegação
 npm install @react-navigation/native
 ww
@@ -16,9 +95,3 @@ npx expo install react-native-screens react-native-safe-area-context
 
 #Instalação da navegação em pilha (stack)
 npm install @react-navigation/stack
-
-#Apos instalação executar o comando
-npm audit fix
-
-#arquivos james
-encurtador.com.br/mo1M
