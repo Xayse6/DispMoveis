@@ -6,9 +6,9 @@ import {Logo} from "../..";
 import {Style} from "./LogoStyles";
 export function components(){
     return(
-            <>
-        <Text>Logo</Text>
-        <Image source={Logo} Styl={{rizeMode="contain", height:180}})}
-     </>
+    <>
+    <Text>Logo</Text>
+    <Image source={Logo} Styl={{rizeMode="contain", height:180}})}
+    </>
     );
 }

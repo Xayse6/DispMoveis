@@ -1,13 +1,10 @@
-// rnbc
-import React from "react";
-import {View} from "react-native";
+import { StyleSheet } from "react-native";
 
-import { styles } from "./HomeStyles";
-export function components(){
-    return(
-        <View style={styles.container}>
-
-        </View>
-    );
-}
-
+export const styles=StyleSheet.create({
+    container:{
+        flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    }
+});
