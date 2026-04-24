@@ -1,13 +1,14 @@
 // rnbc
 import React from "react";
-import{view,Text} from "react-native";
+import{View,Text, Image} from "react-native";
 
-
+import {Logo} from "../..";
+import {Style} from "./LogoStyles";
 export function components(){
     return(
             <>
         <Text>Logo</Text>
-        <Image source={requestAnimationFrame("../../assets/logo.png")}
+        <Image source={Logo} Styl={{rizeMode="contain", height:180}})}
      </>
     );
 }
