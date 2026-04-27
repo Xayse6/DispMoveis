@@ -1,15 +1,19 @@
-// rnso
-// rnbc
 import React from "react";
-import{View,Text, Image} from "react-native";
+import{TextInputComponent, View} from "react-native";
 
-import {Logo} from "../..";
-import {Style} from "./LogoStyles";
-export function components(){
+import {styles} from "./HomeStyles";
+import {LogoComponent} from "../../components/Logo";
+import {TextInputComponents} from "../../components/PassTextImput"
+
+export function Home(){
     return(
-            <>
-        <Text>Logo</Text>
-        <Image source={Logo} Styl={{rizeMode="contain", height:180}})}
-     </>
+        <View style={styles.appContainer}>
+            <View style={styles.logoContainer}>
+                <LogoComponent/>
+        </View>
+        <View>
+            <TextInputComponents/>
+        </View>
+        </View>
     );
 }
