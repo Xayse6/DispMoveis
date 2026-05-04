@@ -17,6 +17,12 @@ export const styles=StyleSheet.create({
         paddingTop:20,
         paddingBottom:10,
         backgroundColor:"#000"
+    },
+    inputContainer:{
+        width:"80%",
+        flexDirection:"column",
+        textAlign:"center",
+        paddingTop:5
     }
 });
 export default styles;

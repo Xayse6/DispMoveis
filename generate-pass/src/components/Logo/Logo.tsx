@@ -1,8 +1,8 @@
 import React from "react";
 import { Text, Image } from "react-native";
 
-import Logo from "../../assets/image/olho.png";
-import { styles } from "./LogoStyles";
+import Logo from "../../../assets/olho,png";
+import styles from "./LogoStyles";
 
 export function LogoComponent() {
   return (
