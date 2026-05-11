@@ -2,6 +2,7 @@
 export type RootStackParamList={
     Home: undefined;
     Detalhes: { loja: Loja };
+    Cadastro:undefined;
 }
 export interface Loja{
     id:string;
