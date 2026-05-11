@@ -1,24 +1,25 @@
-import { View, FlatList, ActivityIndicator, Button } from 'react-native';
+import { View, FlatList, ActivityIndicator, Button, Pressable, Text } from 'react-native';
 import LojaCard from '../../components/LojaCard';
 import { useLojas } from '../../hooks/useLojas';
-import styles from './StyleHome';
+import styles from './StyleHome'
+import { useNavigation } from '@react-navigation/native';
+import { RootStackParamList } from '../../@types/loja';
+import { createStackNavigator } from '@react-navigation/stack';
 
+const Stack = createStackNavigator<RootStackParamList>();
 export default function HomeScreen() {
   const { lojas, loading } = useLojas();
-
-  if (loading) {
-    return <ActivityIndicator size="large" color="#27ae60" />;
-  }
-
-  function handleCadastro() {
-    console.log("Ir para tela de cadastro");
-  }
+  const navigation = useNavigation();
 
   return (
-    <View style={{ flex: 1 }}>
-      <View style={styles.buttonCont}>
-        <Button title="Cadastrar Loja" onPress={handleCadastro} />
-      </View>
+    <View style={styles.container}>
+      <Pressable
+            onPress={() => navigation.navigate("Cadastro")}
+            style={styles.ButtonContainer}
+        >
+            <Text style={styles.Text}>Cadastrar</Text>
+        </Pressable>
+
 
       <FlatList
         data={lojas}
