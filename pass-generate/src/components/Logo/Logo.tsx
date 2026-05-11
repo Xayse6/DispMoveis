@@ -1,14 +1,14 @@
-import React from "react";
-import { Text, Image } from "react-native";
+import React from 'react';
+import { Text, Image } from 'react-native';
 
-import Logo from "./olho.png";
-import styles from "./LogoStyles";
+import styles from './LogoStyles';
+import Logo from '../../../assets/logoBk.png';
 
 export function LogoComponent() {
   return (
     <>
-      <Text style={styles.title}>Pass Generator</Text>
-      <Image source={Logo} style={{ resizeMode: "contain", height: 180 }} />
+      <Text style={styles.title}>Hamburgão do Zé</Text>
+      <Image source={Logo} style={{ resizeMode: 'contain', height: 100 }} />
     </>
   );
 }

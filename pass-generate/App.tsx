@@ -1,11 +1,10 @@
-import React from "react";
-import{View,Text, Image} from "react-native";
+import { Home } from './src/screens/Home/Home';
 
-import { Home } from "./src/screens/Home/Home"
 
-export function LogoComponent(){ 
-  return(
-    <Home/>
+export default function App() {
+  return (
 
-    );
+      <Home/>
+
+  );
 }
