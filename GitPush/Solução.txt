@@ -1,0 +1,1 @@
+Se estiver com problemas para efetuar push no VSCode para o github execute esse cod bat, ele ira remover as credencias salvas no computador, apos remover efetue novamente o push e faça login com o github e  apos terminar execute novamente o cod
