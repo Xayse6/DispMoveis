@@ -30,9 +30,8 @@ npx expo start
 # Configurar Git (nome e email)
 
 # Definir nome do usuário
-git config --global user.name Xayse6
-	
 # Definir email do usuário
+git config --global user.name Xayse6
 git config --global user.email xays3mpena@gmail.com
 
 # Remover usuário e email configurados globalmente no Git
