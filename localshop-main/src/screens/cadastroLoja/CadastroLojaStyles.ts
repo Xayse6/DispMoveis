@@ -3,41 +3,42 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#F4F6F8',
   },
 
   scrollContent: {
-    padding: 20,
-    backgroundColor: '#E5BF3C',
+    padding: 24,
     minHeight: '100%',
+    justifyContent: 'center',
   },
 
   title: {
     fontSize: 28,
     fontWeight: 'bold',
-    color: '#000',
-    marginBottom: 25,
+    color: '#1E293B',
+    marginBottom: 35,
     textAlign: 'center',
   },
 
   label: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#222',
+    color: '#334155',
     marginBottom: 6,
     marginTop: 12,
   },
 
   input: {
     width: '100%',
-    backgroundColor: '#FFF',
+    backgroundColor: '#FFFFFF',
     borderRadius: 8,
     paddingHorizontal: 14,
     paddingVertical: 12,
     fontSize: 16,
     borderWidth: 1,
-    borderColor: '#CCC',
+    borderColor: '#D1D5DB',
   },
+  
 
   button: {
     alignItems: 'center',
@@ -53,9 +54,9 @@ export const styles = StyleSheet.create({
   buttonText: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#FFF',
+    color: '#FFFFFF',
     letterSpacing: 0.5,
-  },
+  }
 });
 
 export default styles;

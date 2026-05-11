@@ -1,8 +1,8 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import HomeScreen from './src/screens/Home/HomeScreen';
-import LojaDetalhes from './src/screens/Details/LojaDetalhes';
+import HomeScreen from './src/screens/home/HomeScreen';
+import LojaDetalhes from './src/screens/details/LojaDetalhes';
 import CadastroLoja from './src/screens/cadastroLoja/CadastroLoja';
 import LojaCard from './src/components/LojaCard';
 import { Loja } from './src/@types/loja';

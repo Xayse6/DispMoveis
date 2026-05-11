@@ -32,39 +32,30 @@ export default function CadastroLoja() {
         <Text style={styles.title}>
           Cadastrar Local
         </Text>
-
         <Text style={styles.label}>
           Nome do local *
         </Text>
-
-        <TextInput
-          style={styles.input}
+        <TextInput style={styles.input}
           placeholder="Ex: Café Central"
           value={formData.nome}
           onChangeText={(v) =>
             updateField("nome", v)
           }
         />
-
         <Text style={styles.label}>
           Categoria *
         </Text>
-
-        <TextInput
-          style={styles.input}
+        <TextInput style={styles.input}
           placeholder="Ex: Restaurante"
           value={formData.categoria}
           onChangeText={(v) =>
             updateField("categoria", v)
           }
         />
-
         <Text style={styles.label}>
           Link da imagem *
         </Text>
-
-        <TextInput
-          style={styles.input}
+        <TextInput style={styles.input}
           placeholder="https://..."
           keyboardType="url"
           autoCapitalize="none"
@@ -73,13 +64,10 @@ export default function CadastroLoja() {
             updateField("imagem", v)
           }
         />
-
         <Text style={styles.label}>
           Distância *
         </Text>
-
-        <TextInput
-          style={styles.input}
+        <TextInput style={styles.input}
           placeholder="200"
           keyboardType="numeric"
           value={formData.distancia}
@@ -87,7 +75,6 @@ export default function CadastroLoja() {
             updateField("distancia", v)
           }
         />
-
         <TouchableOpacity
           style={styles.button}
           onPress={handleSalvar}

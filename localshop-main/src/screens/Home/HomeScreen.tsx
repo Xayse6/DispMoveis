@@ -1,15 +1,19 @@
-import { View, FlatList, ActivityIndicator, Button, Pressable, Text } from 'react-native';
+import { View, FlatList, Pressable, Text, ActivityIndicator } from 'react-native';
 import LojaCard from '../../components/LojaCard';
 import { useLojas } from '../../hooks/useLojas';
-import styles from './StyleHome'
-import { useNavigation } from '@react-navigation/native';
-import { RootStackParamList } from '../../@types/loja';
-import { createStackNavigator } from '@react-navigation/stack';
+import styles from './StyleHome';
 
-const Stack = createStackNavigator<RootStackParamList>();
+import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
+
+import { RootStackParamList } from '../../@types/loja';
+
+type NavigationProps = StackNavigationProp<RootStackParamList>;
+
 export default function HomeScreen() {
   const { lojas, loading } = useLojas();
-  const navigation = useNavigation();
+
+  const navigation = useNavigation<NavigationProps>();
 
   return (
     <View style={styles.container}>
