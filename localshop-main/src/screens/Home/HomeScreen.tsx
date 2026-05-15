@@ -1,4 +1,4 @@
-import { View, FlatList, Pressable, Text, ActivityIndicator } from 'react-native';
+import { View, FlatList, Text, ActivityIndicator, TouchableOpacity } from 'react-native';
 import LojaCard from '../../components/LojaCard';
 import { useLojas } from '../../hooks/useLojas';
 import styles from './StyleHome';
@@ -8,28 +8,29 @@ import { StackNavigationProp } from '@react-navigation/stack';
 
 import { RootStackParamList } from '../../@types/loja';
 
-type NavigationProps = StackNavigationProp<RootStackParamList>;
+type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, "Home">;
 
 export default function HomeScreen() {
   const { lojas, loading } = useLojas();
 
-  const navigation = useNavigation<NavigationProps>();
+  const navigation = useNavigation<HomeScreenNavigationProp>();
+
+  if (loading) return <ActivityIndicator size="large" color="#27ae60"/>;
 
   return (
     <View style={styles.container}>
-      <Pressable
-            onPress={() => navigation.navigate("Cadastro")}
-            style={styles.ButtonContainer}
-        >
-            <Text style={styles.Text}>Cadastrar</Text>
-        </Pressable>
-
-
       <FlatList
         data={lojas}
-        keyExtractor={(item) => item.id?.toString()}
         renderItem={({ item }) => <LojaCard loja={item} />}
+        keyExtractor={(item) => item.id}
       />
+
+      <TouchableOpacity
+        style={styles.fab}
+        onPress={() => navigation.navigate("Cadastro")}
+      >
+        <Text style={styles.fabText}>+</Text>
+      </TouchableOpacity>
     </View>
   );
 }
