@@ -113,3 +113,8 @@ git config --global --unset user.name
 git config --global --unset user.email
 
 git config --global --list
+
+
+npm init -y
+
+npm install typescript @types/express @types/node ts-node-node-dev -D
