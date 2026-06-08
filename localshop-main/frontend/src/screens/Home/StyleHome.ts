@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
 
   },
   fabText:{
-
+    color:"#167"
   }
 });
 
