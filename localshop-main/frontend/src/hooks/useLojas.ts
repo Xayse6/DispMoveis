@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import {api} from "../services/api";
 
 export interface Loja{
-    id: String;
-    nome: String;
-    categoria: String;
-    distancia: String;
-    imagem: String;
-    descricao?: String;
+    id: string;
+    nome: string;
+    categoria: string;
+    distancia: string;
+    imagem: string;
+    descricao?: string;
 }
 export function useLojas(){
     const [lojas, setLojas]= useState<Loja[]>([]);

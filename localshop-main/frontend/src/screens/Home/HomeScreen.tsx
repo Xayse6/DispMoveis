@@ -3,16 +3,22 @@ import LojaCard from '../../components/LojaCard';
 import { useLojas } from '../../hooks/useLojas';
 import styles from './StyleHome';
 
-import { useNavigation } from '@react-navigation/native';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 
 import { RootStackParamList } from '../../@types/loja';
+import { useCallback } from 'react';
 
 type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, "Home">;
 
 export default function HomeScreen() {
-  const { lojas, loading } = useLojas();
+  const { lojas, loading, recaregarLojas } = useLojas();
 
+  useFocusEffect(
+    useCallback(() => {
+      recaregarLojas();
+    }, [])
+  );
   const navigation = useNavigation<HomeScreenNavigationProp>();
 
   if (loading) return <ActivityIndicator size="large" color="#27ae60"/>;

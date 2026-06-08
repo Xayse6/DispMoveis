@@ -90,8 +90,8 @@
             if(nome) dadosAtualizados.nome=nome;
             if(categoria) dadosAtualizados.categoria=categoria;
             if(distancia) dadosAtualizados.distancia=distancia;
-            if(imagem == undefined) dadosAtualizados.imagem=imagem;
-            if(descricao == undefined) dadosAtualizados.descricao=descricao;
+            if (imagem !== undefined) dadosAtualizados.imagem = imagem;
+            if (descricao !== undefined) dadosAtualizados.descricao = descricao;
 
             await docRef.update(dadosAtualizados);
 
