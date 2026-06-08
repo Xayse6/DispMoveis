@@ -1,17 +1,30 @@
 import { useState, useEffect } from "react";
-import { Loja } from '../@types/loja';
-import { LojaServices} from '../services/api';
+import {api} from "../services/api";
 
+export interface Loja{
+    id: String;
+    nome: String;
+    categoria: String;
+    distancia: String;
+    imagem: String;
+    descricao?: String;
+}
 export function useLojas(){
     const [lojas, setLojas]= useState<Loja[]>([]);
-    const [loading, setLoading]= useState(true);
+    const[loading, setLoading]= useState(true);
+    async function caregarLojas() {
+        try{
+            setLoading(true);
 
-    useEffect(()=>{
-        LojaServices.getLojas().then(data=>{
-            setLojas(data);
+            const response = await api.get<Loja[]>("/lojas");
+            setLojas(response.data);
+        
+        }catch(error){
+            console.error("Error ao carregar lojas da API: ", error);
+        }finally{
             setLoading(false);
-        });
-    }, []);
-
-    return {lojas, loading};
+        }
+    }
+    useEffect(()=>{caregarLojas();},[]);
+    return {lojas, loading, recaregarLojas:caregarLojas};
 }

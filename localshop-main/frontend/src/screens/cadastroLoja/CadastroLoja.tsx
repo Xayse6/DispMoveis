@@ -7,15 +7,44 @@ import {
   ScrollView,
   TextInput,
   Text,
+  Alert,
 } from "react-native";
 
 import { useCadastroLoja } from "../../hooks/useCadastroLoja";
 import styles from "./CadastroLojaStyles";
+import { api } from "../../services/api";
+import { useNavigation } from "@react-navigation/native";
+import {Loja} from "../../@types/loja";
 
 export default function CadastroLoja() {
-  const { formData, updateField, handleSalvar } =
+  const { formData, updateField} =
     useCadastroLoja();
+  const navigation=useNavigation();
+  
+  async function handleSalvar() {
+    if(!nome || !categoria || !distancia){
+    Alert.alert("Aviso", "Preencha os campos obrigatorios");
+    return;
+  }
+  try {
+    //Envia os dados do formulario no corpo do POST
+    await api.post("/lojas",{
+      nome,
+      categoria,
+      distancia,
+      imagem,
+      descricao,
+    });
 
+    Alert.alert("Sucesso", "Loja Cadastrada com secesso!");
+    navigation.goBack(); //Volta para a HomeScreen
+
+  } catch (error) {
+    console.error(error);
+    Alert.alert("Erro", "Não foi possivel salvar a loja");
+    
+  }
+}
   return (
     <KeyboardAvoidingView
       style={{ flex: 1 }}

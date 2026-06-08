@@ -22,11 +22,8 @@ app.use (express.json());
  const db = admin.firestore();
 
 app.post("/lojas", async (request, response) => {
-    console.log(`teste 0`);
     try{
-        console.log(`teste 0.1`);
         const {nome, categoria, imagem, distancia, descricao} = request.body;
-        console.log(`teste 0.3`);
         if(!nome || !categoria || !imagem || !distancia){
                 return response.status(400).json({error: "Campos obrigatorios ausentes"});
         }
@@ -38,17 +35,13 @@ app.post("/lojas", async (request, response) => {
             descricao: descricao || "",
             
         };
-        console.log(`teste 1`);
-        
         //Salva no firestore dentro da coleção "lojas"
         const docRef = await db.collection("lojas").add(novaLoja);
-            console.log(`teste 2}`);
         //Retorna o objeto criado junto com o ID gerado
         return response.status(201).json({
             id: docRef.id,
             ...novaLoja,
         });
-        console.log(`teste 3`);
         }catch(error){
             return response.status(500).json({
                 error:"Erro ao salvar a loja no banco."
