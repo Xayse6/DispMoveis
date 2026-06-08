@@ -31,7 +31,7 @@ export default function App() {
         <Stack.Screen
           name="Cadastro"
           component={CadastroLoja}
-          options={{title:"Novo Local"}}
+          options={({ route }) => ({title:"Novo Local"})}
           />
       </Stack.Navigator>
     </NavigationContainer>

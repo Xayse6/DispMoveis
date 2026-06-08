@@ -19,9 +19,11 @@ import {Loja} from "../../@types/loja";
 export default function CadastroLoja() {
   const { formData, updateField} =
     useCadastroLoja();
+
   const navigation=useNavigation();
-  
+
   async function handleSalvar() {
+    const {nome, categoria, distancia, imagem, descricao}=formData
     if(!nome || !categoria || !distancia){
     Alert.alert("Aviso", "Preencha os campos obrigatorios");
     return;
